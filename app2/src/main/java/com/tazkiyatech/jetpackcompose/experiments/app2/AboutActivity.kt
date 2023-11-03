@@ -1,22 +1,18 @@
 package com.tazkiyatech.jetpackcompose.experiments.app2
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.AppTheme
 
-class MainActivity : ComponentActivity() {
+class AboutActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             AppTheme {
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    MainView()
+                    AboutView()
                 }
             }
         }
@@ -32,26 +28,17 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-private fun MainView(modifier: Modifier = Modifier) {
-    val context = LocalContext.current
-
-    Column {
-        Text(
-            text = "Hello from the Main screen!",
-            modifier = modifier
-        )
-        Button(onClick = {
-            context.startActivity(Intent(context, AboutActivity::class.java))
-        }) {
-            Text(text = "Show About screen")
-        }
-    }
+private fun AboutView(modifier: Modifier = Modifier) {
+    Text(
+        text = "Hello from the About screen!",
+        modifier = modifier
+    )
 }
 
 @Preview(showBackground = true)
 @Composable
-fun MainViewPreview() {
+fun AboutViewPreview() {
     AppTheme {
-        MainView()
+        AboutView()
     }
 }

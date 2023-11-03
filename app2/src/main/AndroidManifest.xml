@@ -10,6 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App"
         tools:targetApi="34">
+
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false"
+            android:label="@string/about_activity_title"
+            android:theme="@style/Theme.App" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -19,6 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
