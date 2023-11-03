@@ -1,4 +1,4 @@
-package com.tazkiyatech.jetpackcompose.experiments.app1
+package com.tazkiyatech.jetpackcompose.experiments.app2
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.tazkiyatech.jetpackcompose.experiments.app1.ui.theme.AppTheme
+import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
 

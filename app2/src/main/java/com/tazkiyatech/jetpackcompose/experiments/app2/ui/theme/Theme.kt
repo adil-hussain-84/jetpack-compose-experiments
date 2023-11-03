@@ -1,4 +1,4 @@
-package com.tazkiyatech.jetpackcompose.experiments.app1.ui.theme
+package com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -14,6 +14,12 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.Pink40
+import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.Pink80
+import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.Purple40
+import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.Purple80
+import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.PurpleGrey40
+import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.PurpleGrey80
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
