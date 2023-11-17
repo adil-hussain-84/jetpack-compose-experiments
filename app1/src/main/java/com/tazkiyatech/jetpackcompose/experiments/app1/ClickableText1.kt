@@ -63,8 +63,8 @@ private fun onClick(context: Context, offset: Int) {
 
     val annotations = getText().getStringAnnotations(
         tag = "Link",
-        start = offset,
-        end = offset
+        start = offset -1,
+        end = offset - 1
     )
 
     val annotation = annotations.firstOrNull() ?: return
