@@ -34,19 +34,27 @@ fun ClickableText1() {
 @OptIn(ExperimentalTextApi::class)
 private fun getText(): AnnotatedString {
     return buildAnnotatedString {
-        append("You can tap ")
-        withStyle(SpanStyle(color = Color.Blue, textDecoration = TextDecoration.Underline)) {
-            withAnnotation("Link", "Link 1") {
+        append("You can tap")
+
+        withAnnotation("Link", "Link 1") {
+            append(" ")
+            withStyle(SpanStyle(color = Color.Blue, textDecoration = TextDecoration.Underline)) {
                 append("here")
             }
+            append(" ")
         }
-        append(" or ")
-        withStyle(SpanStyle(color = Color.Blue, textDecoration = TextDecoration.Underline)) {
-            withAnnotation("Link", "Link 2") {
+
+        append("or")
+
+        withAnnotation("Link", "Link 2") {
+            append(" ")
+            withStyle(SpanStyle(color = Color.Blue, textDecoration = TextDecoration.Underline)) {
                 append("here")
             }
+            append(" ")
         }
-        append(" and you'll see a different popup depending on where you tap.")
+
+        append("and you'll see a different popup depending on where you tap.")
     }
 }
 
