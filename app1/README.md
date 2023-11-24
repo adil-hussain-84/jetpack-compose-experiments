@@ -5,8 +5,8 @@ depending on which part of its text is tapped.
 
 You'll find two different solutions in this app, as follows:
 
-* [ClickableText1][1] – This solution uses [ClickableText][3]. It is the simpler of the two solutions but it has a shortcoming: You will get no callback to tell you when the element is pressed down.
-* [ClickableText2][2] – This solution uses [Text][4]. It is the more complicated of the two solution but it has an advantage: You will get a callback to tell you when the element is pressed down.
+* [ClickableText1][1] – This solution uses [ClickableText][3]. It is the simpler of the two solutions but it has a shortcoming: It has no callback to tell you when the element is pressed down.
+* [ClickableText2][2] – This solution uses [Text][4]. Though it is the more complicated of the two solutions, it has an advantage: It has a callback to tell you when the element is pressed down.
 
 When you run the app, you will see a user interface as follows:
 
