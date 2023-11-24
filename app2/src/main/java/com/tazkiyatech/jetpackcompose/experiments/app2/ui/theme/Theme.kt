@@ -10,17 +10,10 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
-import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.Pink40
-import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.Pink80
-import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.Purple40
-import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.Purple80
-import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.PurpleGrey40
-import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.PurpleGrey80
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
