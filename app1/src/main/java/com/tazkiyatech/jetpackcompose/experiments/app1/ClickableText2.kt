@@ -60,7 +60,7 @@ fun ClickableText2() {
 }
 
 private fun onClick(context: Context, characterPosition: Int) {
-    Log.d("ClickableText1", "onClick(offset = $characterPosition)")
+    Log.d("ClickableText2", "onClick(offset = $characterPosition)")
 
     val annotations = getText(pressedCharacterPosition = null).getStringAnnotations(
         tag = "Link",
