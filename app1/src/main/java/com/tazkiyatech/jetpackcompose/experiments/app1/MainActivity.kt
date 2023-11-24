@@ -30,15 +30,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Text("Solution 1", style = MaterialTheme.typography.titleLarge)
-                        ClickableText1()
-                        Text("However, the tapped text will not change in appearance whilst it is pressed down.")
-                        Divider(thickness = 1.dp)
-                        Text("Solution 2", style = MaterialTheme.typography.titleLarge)
-                        ClickableText2()
-                        Text("Here the tapped text will change in appearance whilst it is pressed down.")
-                    }
+                    MainView(modifier = Modifier.padding(16.dp))
                 }
             }
         }
