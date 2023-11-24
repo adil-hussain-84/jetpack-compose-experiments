@@ -1,4 +1,4 @@
-# Experiments with the Jetpack Compose library
+# Experiments with Android's Jetpack Compose UI toolkit
 
 This project houses a number of Android applications which each demonstrate a particular aspect of the [Jetpack Compose][1] library.
 
