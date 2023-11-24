@@ -11,6 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.tazkiyatech.jetpackcompose.experiments.app1.ui.theme.AppTheme
 
+// TODO: Think about accessibility and TalkBack in particular: Is it possible to offer the different links in a single Text element as separate TalkBack actions?
 @Composable
 fun MainView(modifier: Modifier = Modifier) {
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
