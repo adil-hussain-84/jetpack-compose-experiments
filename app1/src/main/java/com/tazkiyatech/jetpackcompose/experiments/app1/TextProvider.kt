@@ -46,6 +46,6 @@ fun getText(pressedCharacterPosition: Int?): AnnotatedString {
             append(" ")
         }
 
-        append("and you'll see a different popup depending on where you tap.")
+        append("and you'll see a different toast message depending on where you tap.")
     }
 }
