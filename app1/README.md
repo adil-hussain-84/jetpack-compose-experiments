@@ -10,7 +10,7 @@ You'll find two different solutions in this app, as follows:
 
 When you run the app, you will see a user interface as follows:
 
-<img src="Screenshot.png" alt="Screenshot of application" width=50%>
+<img src="Screenshot.png" alt="Screenshot of application" width=25%>
 
 [1]: src/main/java/com/tazkiyatech/jetpackcompose/experiments/app1/ClickableText1.kt
 [2]: src/main/java/com/tazkiyatech/jetpackcompose/experiments/app1/ClickableText2.kt
