@@ -16,11 +16,11 @@ fun MainView(modifier: Modifier = Modifier) {
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Text("Solution 1", style = MaterialTheme.typography.titleLarge)
         ClickableText1()
-        Text("The tapped text will not change in appearance whilst it is pressed down.")
+        Text("Sadly, the text above will not change in appearance whilst it is pressed down.")
         Divider(thickness = 1.dp)
         Text("Solution 2", style = MaterialTheme.typography.titleLarge)
         ClickableText2()
-        Text("The tapped text will change in appearance whilst it is pressed down.")
+        Text("Happily, the text above will change in appearance whilst it is pressed down.")
     }
 }
 
