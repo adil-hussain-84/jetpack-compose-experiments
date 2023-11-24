@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.ClickableText
+import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
@@ -29,6 +30,8 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
                         ClickableText1()
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Divider(thickness = 1.dp)
                         Spacer(modifier = Modifier.height(8.dp))
                         ClickableText2()
                     }
