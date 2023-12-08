@@ -1,4 +1,4 @@
-package com.tazkiyatech.jetpackcompose.experiments.app2
+package com.tazkiyatech.jetpackcompose.experiments.app3
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -19,7 +19,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.AppTheme
+import com.tazkiyatech.jetpackcompose.experiments.app3.ui.theme.AppTheme
 
 class AboutActivity : ComponentActivity() {
 
