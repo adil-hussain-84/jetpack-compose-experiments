@@ -17,6 +17,9 @@ tasks.withType<DependencyUpdatesTask> {
     }
 }
 
+/**
+ * @return true if and only if the given version name represents a non-stable version.
+ */
 fun isNonStable(version: String): Boolean {
     val versionInLowercase = version.lowercase()
 
