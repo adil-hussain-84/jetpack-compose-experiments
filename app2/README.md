@@ -5,7 +5,7 @@ This Android application demonstrates how to create a bulleted list with [Jetpac
 You'll find two different solutions in this app, as follows:
 
 * [BulletedList1][1] – This solution uses a single [Text][3] together with a [ParagraphStyle][5] to represent each list item.
-* [BulletedList2][2] – This solution uses a [Row][6] containing two [Text][4] items to represent each list item.
+* [BulletedList2][2] – This solution uses a [Row][6] containing two [Text][4] views to represent each list item.
 
 When you run the app, you will see a user interface as follows:
 
