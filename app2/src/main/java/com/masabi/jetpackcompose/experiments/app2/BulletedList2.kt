@@ -29,14 +29,8 @@ fun BulletedList2Preview() {
 
 @Composable
 private fun BulletedText(text: String) {
-    Row() {
-        Text(
-            text = "• ",
-            style = MaterialTheme.typography.bodyLarge
-        )
-        Text(
-            text = text,
-            style = MaterialTheme.typography.bodyLarge
-        )
+    Row {
+        Text(text = "\u2022 ", style = MaterialTheme.typography.bodyLarge)
+        Text(text = text, style = MaterialTheme.typography.bodyLarge)
     }
 }
