@@ -1,4 +1,4 @@
-package com.masabi.jetpackcompose.experiments.app2
+package com.tazkiyatech.jetpackcompose.experiments.app2
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.masabi.jetpackcompose.experiments.app2.ui.theme.AppTheme
+import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.masabi.jetpackcompose.experiments.app2
+package com.tazkiyatech.jetpackcompose.experiments.app2
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,7 +16,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.masabi.jetpackcompose.experiments.app2.ui.theme.AppTheme
+import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.AppTheme
 
 @Composable
 fun BulletedList1(modifier: Modifier = Modifier) {

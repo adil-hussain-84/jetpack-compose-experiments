@@ -1,4 +1,4 @@
-package com.masabi.jetpackcompose.experiments.app2
+package com.tazkiyatech.jetpackcompose.experiments.app2
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.masabi.jetpackcompose.experiments.app2.ui.theme.AppTheme
+import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.AppTheme
 
 @Composable
 fun MainView(modifier: Modifier = Modifier) {
