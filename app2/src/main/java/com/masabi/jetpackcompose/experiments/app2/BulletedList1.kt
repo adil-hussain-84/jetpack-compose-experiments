@@ -5,9 +5,12 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.ParagraphStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextIndent
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
@@ -31,21 +34,32 @@ fun BulletedList1Preview() {
     }
 }
 
+/**
+ * The logic in this function for measuring the width of the bullet character
+ * is inspired by [this Stack Overflow answer](https://stackoverflow.com/a/77614718/1071320).
+ */
 @Composable
 private fun BulletedText(text: String) {
-    val textIndent = TextIndent(firstLine = 0.sp, restLine = 12.sp)
+    val bulletString = "\u2022 "
+    val textStyle = MaterialTheme.typography.bodyLarge
+
+    val textMeasurer = rememberTextMeasurer()
+
+    val bulletStringWidth = remember(textStyle, textMeasurer) {
+        textMeasurer.measure(text = bulletString, style = textStyle).size.width
+    }
+
+    val restLine = with(LocalDensity.current) { bulletStringWidth.toSp() }
+
+    val textIndent = TextIndent(firstLine = 0.sp, restLine = restLine)
     val paragraphStyle = ParagraphStyle(textIndent = textIndent)
 
     val annotatedString = buildAnnotatedString {
         withStyle(style = paragraphStyle) {
-            append("\u2022")
-            append(" ")
+            append(bulletString)
             append(text)
         }
     }
 
-    Text(
-        text = annotatedString,
-        style = MaterialTheme.typography.bodyLarge
-    )
+    Text(text = annotatedString, style = textStyle)
 }
