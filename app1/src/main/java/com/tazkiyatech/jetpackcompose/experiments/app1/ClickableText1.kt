@@ -8,7 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
-import com.tazkiyatech.jetpackcompose.experiments.app1.ui.theme.AppTheme
+import com.tazkiyatech.jetpackcompose.experiments.app1.theme.AppTheme
 
 @Composable
 fun ClickableText1() {

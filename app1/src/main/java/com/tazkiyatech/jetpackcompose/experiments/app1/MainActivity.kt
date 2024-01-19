@@ -9,7 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.tazkiyatech.jetpackcompose.experiments.app1.ui.theme.AppTheme
+import com.tazkiyatech.jetpackcompose.experiments.app1.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
 

@@ -16,7 +16,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.tooling.preview.Preview
-import com.tazkiyatech.jetpackcompose.experiments.app1.ui.theme.AppTheme
+import com.tazkiyatech.jetpackcompose.experiments.app1.theme.AppTheme
 
 @Composable
 fun ClickableText2() {
