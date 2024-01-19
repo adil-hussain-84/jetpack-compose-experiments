@@ -22,5 +22,5 @@ tasks.withType<DependencyUpdatesTask> {
 fun isNonStable(version: String): Boolean {
     val versionInLowercase = version.lowercase()
 
-    return setOf("alpha", "beta", "rc").any { versionInLowercase.contains(it) }
+    return setOf("-alpha", "-beta", "-rc").any { versionInLowercase.contains(it) }
 }
