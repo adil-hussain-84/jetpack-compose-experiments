@@ -16,7 +16,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme.AppTheme
+import com.tazkiyatech.jetpackcompose.experiments.app2.theme.AppTheme
 
 @Composable
 fun BulletedList1(modifier: Modifier = Modifier) {

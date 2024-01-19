@@ -1,4 +1,4 @@
-package com.tazkiyatech.jetpackcompose.experiments.app2.ui.theme
+package com.tazkiyatech.jetpackcompose.experiments.app2.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
