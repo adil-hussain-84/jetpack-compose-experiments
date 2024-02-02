@@ -1,12 +1,14 @@
 package com.tazkiyatech.compose.app3
 
-import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.IntState
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -16,8 +18,10 @@ import androidx.lifecycle.MutableLiveData
 
 @Composable
 fun MainView(
-    solution3CountLiveData: LiveData<Int>,
+    solution3CountState: IntState,
     solution3IncrementCountCallback: () -> Unit,
+    solution4CountLiveData: LiveData<Int>,
+    solution4IncrementCountCallback: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(
@@ -25,9 +29,6 @@ fun MainView(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-
-        Log.d("App3", "MainView")
-
         Text(text = "Solution 1", style = MaterialTheme.typography.titleLarge)
         Solution1View()
         Divider(thickness = 1.dp)
@@ -35,7 +36,10 @@ fun MainView(
         Solution2View()
         Divider(thickness = 1.dp)
         Text(text = "Solution 3", style = MaterialTheme.typography.titleLarge)
-        Solution3View(solution3CountLiveData, solution3IncrementCountCallback)
+        Solution3View(solution3CountState, solution3IncrementCountCallback)
+        Divider(thickness = 1.dp)
+        Text(text = "Solution 4", style = MaterialTheme.typography.titleLarge)
+        Solution4View(solution4CountLiveData, solution4IncrementCountCallback)
     }
 }
 
@@ -43,6 +47,14 @@ fun MainView(
 @Composable
 fun MainViewPreview() {
     AppTheme {
-        MainView(solution3CountLiveData = MutableLiveData(0), solution3IncrementCountCallback = { })
+        val solution3CountState = remember { mutableIntStateOf(0) }
+        val solution4CountLiveData = MutableLiveData(0)
+
+        MainView(
+            solution3CountState = solution3CountState,
+            solution3IncrementCountCallback = {},
+            solution4CountLiveData = solution4CountLiveData,
+            solution4IncrementCountCallback = { }
+        )
     }
 }
