@@ -1,5 +1,6 @@
 package com.tazkiyatech.compose.app3
 
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
@@ -11,21 +12,26 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 
 @Composable
 fun Solution3View(
+    countLiveData: LiveData<Int>,
+    incrementCountCallback: () -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: Solution3ViewModel
 ) {
-    val count = viewModel.count.observeAsState()
+    val countState = countLiveData.observeAsState()
+
+    Log.d("App3", "Solution3View")
 
     Column(
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
-        Text(text = "Count is ${count.value}", style = MaterialTheme.typography.bodyLarge)
-        Button(onClick = { viewModel.incrementCount() }) {
+        Text(text = "Count is ${countState.value}", style = MaterialTheme.typography.bodyLarge)
+        Button(onClick = { incrementCountCallback() }) {
             Text(text = "Increment Count")
         }
     }
@@ -35,6 +41,6 @@ fun Solution3View(
 @Composable
 fun Solution3ViewPreview() {
     AppTheme {
-        Solution3View(viewModel = Solution3ViewModel())
+        Solution3View(countLiveData = MutableLiveData(0), incrementCountCallback = { })
     }
 }

@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModel
 
 class Solution3ViewModel: ViewModel() {
 
-    private val _count = MutableLiveData(0)
-    val count: LiveData<Int> = _count
+    private val _countLiveData = MutableLiveData(0)
+    val countLiveData: LiveData<Int> = _countLiveData
 
     fun incrementCount() {
-        _count.value = _count.value!! + 1
+        _countLiveData.value = _countLiveData.value!! + 1
     }
 }
