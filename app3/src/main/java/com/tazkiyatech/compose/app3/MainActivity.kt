@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 class MainActivity : ComponentActivity() {
 
     private val solution3ViewModel: Solution3ViewModel by viewModels()
+    private val solution4ViewModel: Solution4ViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +26,8 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.padding(16.dp),
                         solution3CountState = solution3ViewModel.count,
                         solution3IncrementCountCallback = { solution3ViewModel.incrementCount() },
+                        solution4CountState = solution4ViewModel.count,
+                        solution4IncrementCountCallback = { solution4ViewModel.incrementCount() },
                     )
                 }
             }

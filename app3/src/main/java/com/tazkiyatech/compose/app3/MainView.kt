@@ -18,6 +18,8 @@ import androidx.compose.ui.unit.dp
 fun MainView(
     solution3CountState: IntState,
     solution3IncrementCountCallback: () -> Unit,
+    solution4CountState: IntState,
+    solution4IncrementCountCallback: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(
@@ -33,6 +35,9 @@ fun MainView(
         Divider(thickness = 1.dp)
         Text(text = "Solution 3", style = MaterialTheme.typography.titleLarge)
         Solution3View(solution3CountState, solution3IncrementCountCallback)
+        Divider(thickness = 1.dp)
+        Text(text = "Solution 4", style = MaterialTheme.typography.titleLarge)
+        Solution4View(solution4CountState, solution4IncrementCountCallback)
     }
 }
 
@@ -41,10 +46,13 @@ fun MainView(
 fun MainViewPreview() {
     AppTheme {
         val solution3CountState = remember { mutableIntStateOf(0) }
+        val solution4CountState = remember { mutableIntStateOf(0) }
 
         MainView(
             solution3CountState = solution3CountState,
-            solution3IncrementCountCallback = {},
+            solution3IncrementCountCallback = { solution3CountState.intValue++ },
+            solution4CountState = solution4CountState,
+            solution4IncrementCountCallback = { solution4CountState.intValue++ },
         )
     }
 }
