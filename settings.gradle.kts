@@ -28,5 +28,4 @@ dependencyResolutionManagement {
 }
 
 include(":app1")
-include(":app3")
 include(":app2")
