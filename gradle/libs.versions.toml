@@ -10,6 +10,8 @@ compose-ui-ui = { module = "androidx.compose.ui:ui" } # gets the version from th
 compose-ui-testmanifest = { module = "androidx.compose.ui:ui-test-manifest" } # gets the version from the Compose BoM
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" } # gets the version from the Compose BoM
 compose-ui-toolingpreview = { module = "androidx.compose.ui:ui-tooling-preview" } # gets the version from the Compose BoM
+core-ktx = { group = "androidx.core", name = "core-ktx", version = "1.12.0" }
+lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.7.0" }
 
 [plugins]
 android-application = { id = "com.android.application", version = "8.2.2" }
