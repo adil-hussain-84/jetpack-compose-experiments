@@ -22,6 +22,7 @@ fun MainView(
     solution3ViewModel: Solution3ViewModel = viewModel(),
     solution4ViewModel: Solution4ViewModel = viewModel(),
     solution5ViewModel: Solution5ViewModel = viewModel(),
+    solution6ViewModel: Solution6ViewModel = viewModel(),
 ) {
     Log.d("App3", "MainView() called")
 
@@ -44,6 +45,9 @@ fun MainView(
         HorizontalDivider(thickness = 1.dp)
         Text(text = "Solution 5", style = MaterialTheme.typography.titleLarge)
         Solution5View(solution5ViewModel.countLiveData, { solution5ViewModel.incrementCount() })
+        HorizontalDivider(thickness = 1.dp)
+        Text(text = "Solution 6", style = MaterialTheme.typography.titleLarge)
+        Solution6View(solution6ViewModel.countStateFlow, { solution6ViewModel.incrementCount() })
     }
 }
 
