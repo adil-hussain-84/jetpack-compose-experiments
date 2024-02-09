@@ -11,8 +11,8 @@ When you run the app, you will see a user interface as follows:
 
 <img src="Screenshot.png" alt="Screenshot of application" width=25%>
 
-[1]: src/main/java/com/tazkiyatech/jetpackcompose/experiments/app2/BulletedList1.kt
-[2]: src/main/java/com/tazkiyatech/jetpackcompose/experiments/app2/BulletedList2.kt
+[1]: src/main/java/com/tazkiyatech/compose/experiments/app2/BulletedList1.kt
+[2]: src/main/java/com/tazkiyatech/compose/experiments/app2/BulletedList2.kt
 [3]: https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#Text(androidx.compose.ui.text.AnnotatedString,androidx.compose.ui.Modifier,androidx.compose.ui.graphics.Color,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.font.FontStyle,androidx.compose.ui.text.font.FontWeight,androidx.compose.ui.text.font.FontFamily,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextDecoration,androidx.compose.ui.text.style.TextAlign,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextOverflow,kotlin.Boolean,kotlin.Int,kotlin.Int,kotlin.collections.Map,kotlin.Function1,androidx.compose.ui.text.TextStyle)
 [4]: https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#Text(kotlin.String,androidx.compose.ui.Modifier,androidx.compose.ui.graphics.Color,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.font.FontStyle,androidx.compose.ui.text.font.FontWeight,androidx.compose.ui.text.font.FontFamily,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextDecoration,androidx.compose.ui.text.style.TextAlign,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextOverflow,kotlin.Boolean,kotlin.Int,kotlin.Int,kotlin.Function1,androidx.compose.ui.text.TextStyle)
 [5]: https://developer.android.com/reference/kotlin/androidx/compose/ui/text/ParagraphStyle
