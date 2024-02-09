@@ -1,4 +1,4 @@
-package com.tazkiyatech.jetpackcompose.experiments.app1.theme
+package com.tazkiyatech.compose.experiments.app2.theme
 
 import androidx.compose.ui.graphics.Color
 

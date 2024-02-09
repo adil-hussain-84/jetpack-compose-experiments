@@ -4,6 +4,7 @@ import androidx.compose.runtime.IntState
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import com.tazkiyatech.compose.app3.extensions.getOrDefault
 
 class Solution4ViewModel(private val savedStateHandle: SavedStateHandle) : ViewModel() {
 

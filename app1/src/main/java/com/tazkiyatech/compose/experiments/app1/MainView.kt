@@ -1,4 +1,4 @@
-package com.tazkiyatech.jetpackcompose.experiments.app1
+package com.tazkiyatech.compose.experiments.app1
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.tazkiyatech.jetpackcompose.experiments.app1.theme.AppTheme
+import com.tazkiyatech.compose.experiments.app1.theme.AppTheme
 
 // TODO: Think about accessibility and TalkBack in particular: Is it possible to offer the different links in a single Text element as separate TalkBack actions?
 @Composable

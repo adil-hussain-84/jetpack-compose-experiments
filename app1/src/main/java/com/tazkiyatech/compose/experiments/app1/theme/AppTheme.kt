@@ -1,4 +1,4 @@
-package com.tazkiyatech.jetpackcompose.experiments.app1.theme
+package com.tazkiyatech.compose.experiments.app1.theme
 
 import android.app.Activity
 import android.os.Build

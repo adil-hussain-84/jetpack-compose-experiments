@@ -1,4 +1,4 @@
-package com.tazkiyatech.compose.app3
+package com.tazkiyatech.compose.app3.theme
 
 import android.app.Activity
 import android.os.Build

@@ -10,9 +10,8 @@
         android:theme="@style/Theme.App">
 
         <activity
-            android:name="com.tazkiyatech.jetpackcompose.experiments.app2.MainActivity"
+            android:name="com.tazkiyatech.compose.experiments.app2.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.App">
 
             <intent-filter>

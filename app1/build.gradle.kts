@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.tazkiyatech.jetpackcompose.experiments.app1"
+    namespace = "com.tazkiyatech.compose.experiments.app1"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.tazkiyatech.jetpackcompose.experiments.app1"
+        applicationId = "com.tazkiyatech.compose.experiments.app1"
         minSdk = 24
         targetSdk = 34
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

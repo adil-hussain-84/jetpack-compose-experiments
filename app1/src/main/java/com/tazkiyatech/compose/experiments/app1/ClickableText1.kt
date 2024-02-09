@@ -1,4 +1,4 @@
-package com.tazkiyatech.jetpackcompose.experiments.app1
+package com.tazkiyatech.compose.experiments.app1
 
 import android.content.Context
 import android.util.Log
@@ -8,7 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
-import com.tazkiyatech.jetpackcompose.experiments.app1.theme.AppTheme
+import com.tazkiyatech.compose.experiments.app1.theme.AppTheme
 
 @Composable
 fun ClickableText1() {

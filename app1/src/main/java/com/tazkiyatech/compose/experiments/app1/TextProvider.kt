@@ -1,4 +1,4 @@
-package com.tazkiyatech.jetpackcompose.experiments.app1
+package com.tazkiyatech.compose.experiments.app1
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.AnnotatedString
