@@ -16,6 +16,7 @@ class MainActivity : ComponentActivity() {
 
     private val solution3ViewModel: Solution3ViewModel by viewModels()
     private val solution4ViewModel: Solution4ViewModel by viewModels()
+    private val solution5ViewModel: Solution5ViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +30,8 @@ class MainActivity : ComponentActivity() {
                         solution3IncrementCountCallback = { solution3ViewModel.incrementCount() },
                         solution4CountState = solution4ViewModel.countState,
                         solution4IncrementCountCallback = { solution4ViewModel.incrementCount() },
+                        solution5CountLiveData = solution5ViewModel.countLiveData,
+                        solution5IncrementCountCallback = { solution5ViewModel.incrementCount() },
                     )
                 }
             }
