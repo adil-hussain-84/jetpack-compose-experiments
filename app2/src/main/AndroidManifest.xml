@@ -10,7 +10,7 @@
         android:theme="@style/Theme.App">
 
         <activity
-            android:name="com.tazkiyatech.compose.experiments.app2.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.App">
 
