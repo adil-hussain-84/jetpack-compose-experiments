@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModel
 
 class Solution3ViewModel : ViewModel() {
 
-    private val _count = mutableIntStateOf(0)
-    val count: IntState = _count
+    private val _countState = mutableIntStateOf(0)
+    val countState: IntState = _countState
 
     fun incrementCount() {
-        _count.intValue++
+        _countState.intValue++
     }
 }

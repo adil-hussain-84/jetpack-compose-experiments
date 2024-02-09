@@ -1,5 +1,6 @@
 package com.tazkiyatech.compose.app3
 
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
@@ -20,6 +21,8 @@ fun Solution3View(
     incrementCountCallback: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    Log.d("App3", "Solution3View() called")
+
     Column(
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally,

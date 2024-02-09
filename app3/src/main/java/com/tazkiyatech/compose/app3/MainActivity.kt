@@ -24,9 +24,9 @@ class MainActivity : ComponentActivity() {
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
                     MainView(
                         modifier = Modifier.padding(16.dp),
-                        solution3CountState = solution3ViewModel.count,
+                        solution3CountState = solution3ViewModel.countState,
                         solution3IncrementCountCallback = { solution3ViewModel.incrementCount() },
-                        solution4CountState = solution4ViewModel.count,
+                        solution4CountState = solution4ViewModel.countState,
                         solution4IncrementCountCallback = { solution4ViewModel.incrementCount() },
                     )
                 }

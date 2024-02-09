@@ -1,5 +1,6 @@
 package com.tazkiyatech.compose.app3
 
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.HorizontalDivider
@@ -22,6 +23,8 @@ fun MainView(
     solution4IncrementCountCallback: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    Log.d("App3", "MainView() called")
+
     Column(
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally,

@@ -5,13 +5,13 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 
-class Solution4ViewModel(val savedStateHandle: SavedStateHandle) : ViewModel() {
+class Solution4ViewModel(private val savedStateHandle: SavedStateHandle) : ViewModel() {
 
-    private val _count = mutableIntStateOf(savedStateHandle.getOrDefault("count", 0))
-    val count: IntState = _count
+    private val _countState = mutableIntStateOf(savedStateHandle.getOrDefault("count", 0))
+    val countState: IntState = _countState
 
     fun incrementCount() {
-        _count.intValue++
-        savedStateHandle["count"] = _count.intValue
+        _countState.intValue++
+        savedStateHandle["count"] = _countState.intValue
     }
 }

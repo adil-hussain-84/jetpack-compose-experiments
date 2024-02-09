@@ -1,5 +1,6 @@
 package com.tazkiyatech.compose.app3
 
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
@@ -18,6 +19,8 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun Solution2View(modifier: Modifier = Modifier) {
     var count by rememberSaveable { mutableIntStateOf(0) }
+
+    Log.d("App3", "Solution2View() called")
 
     Column(
         modifier = modifier,
