@@ -1,4 +1,4 @@
-package com.tazkiyatech.compose.app3
+package com.tazkiyatech.compose.experiments.app3
 
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
@@ -15,7 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.tazkiyatech.compose.app3.theme.AppTheme
+import com.tazkiyatech.compose.experiments.app3.theme.AppTheme
 
 @Composable
 fun Solution2View(modifier: Modifier = Modifier) {

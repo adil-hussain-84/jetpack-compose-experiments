@@ -1,4 +1,4 @@
-package com.tazkiyatech.compose.app3
+package com.tazkiyatech.compose.experiments.app3
 
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
@@ -13,17 +13,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.tazkiyatech.compose.app3.theme.AppTheme
+import com.tazkiyatech.compose.experiments.app3.theme.AppTheme
 
 @Composable
-fun MainView(
-    modifier: Modifier = Modifier,
-    solution3ViewModel: Solution3ViewModel = viewModel(),
-    solution4ViewModel: Solution4ViewModel = viewModel(),
-    solution5ViewModel: Solution5ViewModel = viewModel(),
-    solution6ViewModel: Solution6ViewModel = viewModel(),
-) {
+fun MainView(modifier: Modifier = Modifier) {
     Log.d("App3", "MainView() called")
 
     Column(
@@ -38,16 +31,16 @@ fun MainView(
         Solution2View()
         HorizontalDivider(thickness = 1.dp)
         Text(text = "Solution 3", style = MaterialTheme.typography.titleLarge)
-        Solution3View(solution3ViewModel.countState, { solution3ViewModel.incrementCount() })
+        Solution3View()
         HorizontalDivider(thickness = 1.dp)
         Text(text = "Solution 4", style = MaterialTheme.typography.titleLarge)
-        Solution4View(solution4ViewModel.countState, { solution4ViewModel.incrementCount() })
+        Solution4View()
         HorizontalDivider(thickness = 1.dp)
         Text(text = "Solution 5", style = MaterialTheme.typography.titleLarge)
-        Solution5View(solution5ViewModel.countLiveData, { solution5ViewModel.incrementCount() })
+        Solution5View()
         HorizontalDivider(thickness = 1.dp)
         Text(text = "Solution 6", style = MaterialTheme.typography.titleLarge)
-        Solution6View(solution6ViewModel.countStateFlow, { solution6ViewModel.incrementCount() })
+        Solution6View()
     }
 }
 

@@ -1,4 +1,4 @@
-package com.tazkiyatech.compose.app3
+package com.tazkiyatech.compose.experiments.app3
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,7 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.tazkiyatech.compose.app3.theme.AppTheme
+import com.tazkiyatech.compose.experiments.app3.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
 

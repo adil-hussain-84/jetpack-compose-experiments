@@ -1,4 +1,4 @@
-package com.tazkiyatech.compose.app3
+package com.tazkiyatech.compose.experiments.app3
 
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
@@ -13,18 +13,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import com.tazkiyatech.compose.app3.theme.AppTheme
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.tazkiyatech.compose.experiments.app3.theme.AppTheme
 
 @Composable
 fun Solution5View(
-    countLiveData: LiveData<Int>,
-    incrementCountCallback: () -> Unit,
     modifier: Modifier = Modifier,
+    viewModel: Solution5ViewModel = viewModel(),
 ) {
     Log.d("App3", "Solution5View() called")
 
-    val countState = countLiveData.observeAsState(initial = 0)
+    val countState = viewModel.countLiveData.observeAsState(initial = 0)
 
     Column(
         modifier = modifier,
@@ -32,7 +33,7 @@ fun Solution5View(
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
         Text(text = "Count is ${countState.value}", style = MaterialTheme.typography.bodyLarge)
-        Button(onClick = { incrementCountCallback() }) {
+        Button(onClick = { viewModel.incrementCount() }) {
             Text(text = "Increment Count")
         }
     }
@@ -41,10 +42,15 @@ fun Solution5View(
 @Preview(showBackground = true)
 @Composable
 fun Solution5ViewPreview() {
-    AppTheme {
-        val countLiveData = MutableLiveData(0)
-        val incrementCountCallback = { countLiveData.value = countLiveData.value!! + 1 }
+    AppTheme { Solution5View() }
+}
 
-        Solution5View(countLiveData, incrementCountCallback)
+class Solution5ViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
+
+    private val _countLiveData = savedStateHandle.getLiveData("count", 0)
+    val countLiveData: LiveData<Int> = _countLiveData
+
+    fun incrementCount() {
+        _countLiveData.value = _countLiveData.value!! + 1
     }
 }

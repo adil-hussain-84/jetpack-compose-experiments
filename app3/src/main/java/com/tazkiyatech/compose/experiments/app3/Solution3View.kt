@@ -1,4 +1,4 @@
-package com.tazkiyatech.compose.app3
+package com.tazkiyatech.compose.experiments.app3
 
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
@@ -9,28 +9,30 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.IntState
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.tazkiyatech.compose.app3.theme.AppTheme
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.tazkiyatech.compose.experiments.app3.theme.AppTheme
 
 @Composable
-fun Solution4View(
-    countState: IntState,
-    incrementCountCallback: () -> Unit,
+fun Solution3View(
     modifier: Modifier = Modifier,
+    viewModel: Solution3ViewModel = viewModel(),
 ) {
-    Log.d("App3", "Solution4View() called")
+    Log.d("App3", "Solution3View() called")
+
+    val count = viewModel.countState.intValue
 
     Column(
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
-        Text(text = "Count is ${countState.intValue}", style = MaterialTheme.typography.bodyLarge)
-        Button(onClick = { incrementCountCallback() }) {
+        Text(text = "Count is $count", style = MaterialTheme.typography.bodyLarge)
+        Button(onClick = { viewModel.incrementCount() }) {
             Text(text = "Increment Count")
         }
     }
@@ -38,9 +40,16 @@ fun Solution4View(
 
 @Preview(showBackground = true)
 @Composable
-fun Solution4ViewPreview() {
-    AppTheme {
-        val countState = remember { mutableIntStateOf(0) }
-        Solution4View(countState = countState, incrementCountCallback = { countState.intValue++ })
+fun Solution3ViewPreview() {
+    AppTheme { Solution3View() }
+}
+
+class Solution3ViewModel : ViewModel() {
+
+    private val _countState = mutableIntStateOf(0)
+    val countState: IntState = _countState
+
+    fun incrementCount() {
+        _countState.intValue++
     }
 }

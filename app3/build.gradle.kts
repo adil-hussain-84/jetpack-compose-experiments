@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.tazkiyatech.compose.app3"
+    namespace = "com.tazkiyatech.compose.experiments.app3"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.tazkiyatech.compose.app3"
+        applicationId = "com.tazkiyatech.compose.experiments.app3"
         minSdk = 24
         targetSdk = 34
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

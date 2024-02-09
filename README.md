@@ -6,5 +6,6 @@ The applications in this project are as follows:
 
 * [app1](app1) – Tappable text demonstration.
 * [app2](app2) – Bulleted text demonstration.
+* [app3](app3) – State demonstration.
 
 [1]: https://developer.android.com/jetpack/compose
