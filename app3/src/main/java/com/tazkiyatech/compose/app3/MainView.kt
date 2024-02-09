@@ -2,7 +2,7 @@ package com.tazkiyatech.compose.app3
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -29,13 +29,13 @@ fun MainView(
     ) {
         Text(text = "Solution 1", style = MaterialTheme.typography.titleLarge)
         Solution1View()
-        Divider(thickness = 1.dp)
+        HorizontalDivider(thickness = 1.dp)
         Text(text = "Solution 2", style = MaterialTheme.typography.titleLarge)
         Solution2View()
-        Divider(thickness = 1.dp)
+        HorizontalDivider(thickness = 1.dp)
         Text(text = "Solution 3", style = MaterialTheme.typography.titleLarge)
         Solution3View(solution3CountState, solution3IncrementCountCallback)
-        Divider(thickness = 1.dp)
+        HorizontalDivider(thickness = 1.dp)
         Text(text = "Solution 4", style = MaterialTheme.typography.titleLarge)
         Solution4View(solution4CountState, solution4IncrementCountCallback)
     }
