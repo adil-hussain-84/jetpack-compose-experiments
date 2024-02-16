@@ -4,14 +4,14 @@ This Android application demonstrates different ways of remembering state in [Je
 
 You'll find six different [Composable][8] functions in this app, as follows:
 
-|                    |                                                                                                                                                |
-|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Solution1View][1] | This [Composable][8] defines a [State][9] object within itself directly by means of the [remember][10] function.                               |
-| [Solution2View][2] | This [Composable][8] defines a [State][9] object within itself directly by means of the [rememberSaveable][11] function.                       |
-| [Solution3View][3] | This [Composable][8] defines a [State][9] object within a [ViewModel][12] that does not propagate the state to a [SavedStateHandle][13] object |
-| [Solution4View][4] | This [Composable][8] defines a [State][9] object within a [ViewModel][12] that does propagate the state to a [SavedStateHandle][13] object.    |
-| [Solution5View][5] | This [Composable][8] is similar to [Solution4View][4] except that its [ViewModel][12] uses [LiveData][14] instead of a [State][9] object.      |
-| [Solution6View][6] | This [Composable][8] is similar to [Solution4View][4] except that its [ViewModel][12] uses [StateFlow][15] instead of a [State][9] object.     |
+|                    |                                                                                                                                                 |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Solution1View][1] | This [Composable][8] defines a [State][9] object within itself directly by means of the [remember][10] function.                                |
+| [Solution2View][2] | This [Composable][8] defines a [State][9] object within itself directly by means of the [rememberSaveable][11] function.                        |
+| [Solution3View][3] | This [Composable][8] defines a [State][9] object within a [ViewModel][12] that does not propagate the state to a [SavedStateHandle][13] object. |
+| [Solution4View][4] | This [Composable][8] defines a [State][9] object within a [ViewModel][12] that does propagate the state to a [SavedStateHandle][13] object.     |
+| [Solution5View][5] | This [Composable][8] is similar to [Solution4View][4] except that its [ViewModel][12] uses [LiveData][14] instead of a [State][9] object.       |
+| [Solution6View][6] | This [Composable][8] is similar to [Solution4View][4] except that its [ViewModel][12] uses [StateFlow][15] instead of a [State][9] object.      |
 
 When you run the app, you will see a user interface as follows:
 
