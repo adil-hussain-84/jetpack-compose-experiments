@@ -1,5 +1,5 @@
 [versions]
-compose-compiler = "1.5.8"
+compose-compiler = "1.5.9"
 lifecycle = "2.7.0"
 
 [libraries]
