@@ -4,7 +4,8 @@ This Android application demonstrates different ways of remembering state in [Je
 
 You'll find six different [Composable][8] functions in this app, as follows:
 
-|-|-|
+|                    |                                                                                                                                                |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Solution1View][1] | This [Composable][8] defines a [State][9] object within itself directly by means of the [remember][10] function.                               |
 | [Solution2View][2] | This [Composable][8] defines a [State][9] object within itself directly by means of the [rememberSaveable][11] function.                       |
 | [Solution3View][3] | This [Composable][8] defines a [State][9] object within a [ViewModel][12] that does not propagate the state to a [SavedStateHandle][13] object |
