@@ -13,6 +13,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.tazkiyatech.compose.experiments.app3.theme.AppTheme
@@ -28,7 +30,15 @@ fun Solution1View(modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
-        Text(text = "Count is $count", style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = stringResource(id = R.string.solution_1_description),
+            textAlign = TextAlign.Justify,
+            style = MaterialTheme.typography.bodyMedium
+        )
+        Text(
+            text = "Count is $count",
+            style = MaterialTheme.typography.bodyLarge
+        )
         Button(onClick = { count++ }) {
             Text(text = "Increment Count")
         }

@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">Compose Experiment App3</string>
+    <string name="solution_1_description">
+        This Composable saves a count value in a State object that it owns directly by means of the \'remember\' function.
+        The count value does not survive activity or process recreation.
+    </string>
+    <string name="solution_2_description">
+        This Composable saves a count value in a State object that it owns directly by means of the \'rememberSaveable\' function.
+        The count value survives activity recreation and process recreation.
+    </string>
+    <string name="solution_3_description">
+        This Composable saves a count value in a State that belongs to its ViewModel.
+        The ViewModel does not propagate the count value through to a SavedStateHandle object.
+        The count value in this ViewModel survives activity recreation but not process recreation.
+    </string>
+    <string name="solution_4_description">
+        This Composable saves a count value in a State object that belongs to its ViewModel.
+        The ViewModel propagates the count value through to a SavedStateHandle object.
+        The count value in this ViewModel survives activity recreation and process recreation.
+    </string>
+    <string name="solution_5_description">
+        This Composable saves a count value in a LiveData object that belongs to its ViewModel\'s SavedStateHandle object.
+        The count value in this ViewModel survives activity recreation and process recreation.
+    </string>
+    <string name="solution_6_description">
+        This Composable saves a count value in a StateFlow object that belongs to its ViewModel\'s SavedStateHandle object.
+        The count value in this ViewModel survives activity recreation and process recreation.
+    </string>
 </resources>

@@ -11,6 +11,8 @@ import androidx.compose.runtime.IntState
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.SavedStateHandle
@@ -32,7 +34,15 @@ fun Solution4View(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
-        Text(text = "Count is $count", style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = stringResource(id = R.string.solution_4_description),
+            textAlign = TextAlign.Justify,
+            style = MaterialTheme.typography.bodyMedium
+        )
+        Text(
+            text = "Count is $count",
+            style = MaterialTheme.typography.bodyLarge
+        )
         Button(onClick = { viewModel.incrementCount() }) {
             Text(text = "Increment Count")
         }
