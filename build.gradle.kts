@@ -3,11 +3,12 @@ import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.benmanes.versions)
-    alias(libs.plugins.jetbrains.kotlin.android) apply false
+    alias(libs.plugins.compose.compiler) apply false
+    alias(libs.plugins.kotlin.android) apply false
 }
 
 tasks.wrapper {
-    gradleVersion = "8.6"
+    gradleVersion = "8.10.1"
 }
 
 // Alter the default behaviour of the "com.github.ben-manes.versions" plugin
