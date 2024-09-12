@@ -8,6 +8,9 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.ripple.LocalRippleTheme
+import androidx.compose.material.ripple.RippleAlpha
+import androidx.compose.material.ripple.RippleTheme
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
@@ -15,6 +18,7 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Devices
@@ -48,16 +52,29 @@ fun MainView(modifier: Modifier = Modifier) {
         ) {
             Text(text = "Tap me")
         }
-        OutlinedButton(
-            border = BorderStroke(1.5.dp, MaterialTheme.colorScheme.onSurface),
-            onClick = {},
-        ) {
-            Text(
-                text = "Tap me",
-                color = MaterialTheme.colorScheme.onSurface
-            )
+        CompositionLocalProvider(LocalRippleTheme provides MyOutlinedButtonRippleTheme) {
+            OutlinedButton(
+                border = BorderStroke(1.5.dp, MaterialTheme.colorScheme.onSurface),
+                onClick = {},
+            ) {
+                Text(
+                    text = "Tap me",
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+            }
         }
     }
+}
+
+private object MyOutlinedButtonRippleTheme : RippleTheme {
+
+    @Composable
+    override fun defaultColor() =
+        RippleTheme.defaultRippleColor(MaterialTheme.colorScheme.onSurface, lightTheme = true)
+
+    @Composable
+    override fun rippleAlpha(): RippleAlpha =
+        RippleTheme.defaultRippleAlpha(MaterialTheme.colorScheme.onSurface, lightTheme = true)
 }
 
 @Preview(name = "Phone", device = Devices.PHONE, showSystemUi = true)
