@@ -4,7 +4,7 @@ lifecycle = "2.8.5"
 
 [libraries]
 activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.9.2" }
-compose-bom = { group = "androidx.compose", name = "compose-bom", version = "2024.08.00" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version = "2024.09.01" }
 compose-material3 = { module = "androidx.compose.material3:material3" } # gets the version from the Compose BoM
 compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata" }
 compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" } # gets the version from the Compose BoM

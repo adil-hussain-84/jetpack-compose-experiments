@@ -8,13 +8,13 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.ripple.LocalRippleTheme
-import androidx.compose.material.ripple.RippleAlpha
-import androidx.compose.material.ripple.RippleTheme
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.LocalRippleConfiguration
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.RippleConfiguration
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -34,15 +34,18 @@ class MainActivity : ComponentActivity() {
         setContent {
             AppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MainView(modifier = Modifier
-                        .padding(innerPadding)
-                        .fillMaxSize())
+                    MainView(
+                        modifier = Modifier
+                            .padding(innerPadding)
+                            .fillMaxSize()
+                    )
                 }
             }
         }
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainView(modifier: Modifier = Modifier) {
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
@@ -52,7 +55,7 @@ fun MainView(modifier: Modifier = Modifier) {
         ) {
             Text(text = "Tap me")
         }
-        CompositionLocalProvider(LocalRippleTheme provides MyOutlinedButtonRippleTheme) {
+        CompositionLocalProvider(LocalRippleConfiguration provides RippleConfiguration(MaterialTheme.colorScheme.onSurface)) {
             OutlinedButton(
                 border = BorderStroke(1.5.dp, MaterialTheme.colorScheme.onSurface),
                 onClick = {},
@@ -64,17 +67,6 @@ fun MainView(modifier: Modifier = Modifier) {
             }
         }
     }
-}
-
-private object MyOutlinedButtonRippleTheme : RippleTheme {
-
-    @Composable
-    override fun defaultColor() =
-        RippleTheme.defaultRippleColor(MaterialTheme.colorScheme.onSurface, lightTheme = true)
-
-    @Composable
-    override fun rippleAlpha(): RippleAlpha =
-        RippleTheme.defaultRippleAlpha(MaterialTheme.colorScheme.onSurface, lightTheme = true)
 }
 
 @Preview(name = "Phone", device = Devices.PHONE, showSystemUi = true)
