@@ -3,6 +3,7 @@ package com.tazkiyatech.compose.experiments.app1
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,7 +19,7 @@ fun MainView(modifier: Modifier = Modifier) {
         Text("Solution 1", style = MaterialTheme.typography.titleLarge)
         ClickableText1()
         Text("Sadly, the text above will not change in appearance whilst it is pressed down.")
-        Divider(thickness = 1.dp)
+        HorizontalDivider(thickness = 1.dp)
         Text("Solution 2", style = MaterialTheme.typography.titleLarge)
         ClickableText2()
         Text("Happily, the text above will change in appearance whilst it is pressed down.")

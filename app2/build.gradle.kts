@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.tazkiyatech.compose.experiments.app2"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.tazkiyatech.compose.experiments.app2"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         versionCode = 1
         versionName = "1.0"
