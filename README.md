@@ -11,4 +11,4 @@ The applications in this project are as follows:
 | [app3](app3) | State demonstration.         |
 | [app4](app4) | Buttons' demonstration.      |
 
-[1]: https://developer.android.com/jetpack/compose
+[1]: https://developer.android.com/compose
