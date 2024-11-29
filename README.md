@@ -10,5 +10,6 @@ The applications in this project are as follows:
 | [app2](app2) | Bulleted text demonstration. |
 | [app3](app3) | State demonstration.         |
 | [app4](app4) | Buttons' demonstration.      |
+| [app5](app5) | Accessibility demonstration. |
 
 [1]: https://developer.android.com/compose

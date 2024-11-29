@@ -1,4 +1,4 @@
-package com.tazkiyatech.compose.experiments.app4.ui.theme
+package com.tazkiyatech.compose.experiments.app4.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
