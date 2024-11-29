@@ -41,7 +41,9 @@ fun Demo2View(modifier: Modifier = Modifier) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .semantics { contentDescription = "$labelText $buttonText" },
+                .semantics {
+                    contentDescription = "$labelText $buttonText. Button. Double-tap to activate."
+                },
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically,
         ) {
