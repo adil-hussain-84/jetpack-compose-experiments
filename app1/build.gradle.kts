@@ -53,9 +53,9 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.activity.compose)
     implementation(libs.compose.material3)
-    implementation(libs.compose.ui.ui)
     implementation(libs.compose.ui.graphics)
     implementation(libs.compose.ui.toolingpreview)
+    implementation(libs.compose.ui.ui)
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
 }
