@@ -24,6 +24,7 @@ import com.tazkiyatech.compose.experiments.app5.theme.AppTheme
 fun Demo2View(modifier: Modifier = Modifier) {
     val labelText = "Date completed"
     val buttonText = "November 2024"
+    val rowContentDescription = "$labelText $buttonText. Double-tap to expand the date picker."
 
     Column(
         modifier = modifier,
@@ -36,26 +37,18 @@ fun Demo2View(modifier: Modifier = Modifier) {
             style = MaterialTheme.typography.titleLarge,
         )
         Text(
-            text = "We're giving the Row below a \"contentDescription\" value of \"Date completed November 2024. Double-tap to expand the date picker.\" and we're clearing the Text and Button's semantics. TalkBack will read the \"contentDescription\" value exactly when you focus on the Row and it won't offer the Button as a focusable item."
+            text = "We're calling \"clearAndSetSemantics\" on the Row below and giving it a \"contentDescription\" value of \"Date completed November 2024. Double-tap to expand the date picker.\". TalkBack will read the \"contentDescription\" value exactly when you focus on the Row and it won't offer the Button as a focusable item."
         )
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .semantics {
-                    contentDescription = "$labelText $buttonText. Double-tap to expand the date picker."
-                },
+                .clearAndSetSemantics { contentDescription = rowContentDescription },
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text(
-                text = labelText,
-                modifier = Modifier.clearAndSetSemantics { },
-            )
+            Text(labelText)
             Spacer(modifier = Modifier.width(4.dp))
-            Button(
-                onClick = { },
-                modifier = Modifier.clearAndSetSemantics { },
-            ) {
+            Button(onClick = { }) {
                 Text(buttonText)
             }
         }
