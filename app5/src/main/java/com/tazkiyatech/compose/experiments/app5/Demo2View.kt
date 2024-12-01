@@ -36,13 +36,13 @@ fun Demo2View(modifier: Modifier = Modifier) {
             style = MaterialTheme.typography.titleLarge,
         )
         Text(
-            text = "We're giving the Row below a \"contentDescription\" value of \"Date completed November 2024\" and we're clearing the Text and Button's semantics. TalkBack will read \"Date completed November 2024\" when you select the Row."
+            text = "We're giving the Row below a \"contentDescription\" value of \"Date completed November 2024. Double-tap to expand the date picker.\" and we're clearing the Text and Button's semantics. TalkBack will read the \"contentDescription\" value exactly when you focus on the Row and it won't offer the Button as a focusable item."
         )
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .semantics {
-                    contentDescription = "$labelText $buttonText. Button. Double-tap to activate."
+                    contentDescription = "$labelText $buttonText. Double-tap to expand the date picker."
                 },
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically,
