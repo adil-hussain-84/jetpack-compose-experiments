@@ -27,6 +27,9 @@ fun MainView(modifier: Modifier = Modifier) {
         HorizontalDivider(thickness = 1.dp)
         Spacer(modifier = Modifier.height(4.dp))
         Demo2View()
+        HorizontalDivider(thickness = 1.dp)
+        Spacer(modifier = Modifier.height(4.dp))
+        Demo3View()
     }
 }
 

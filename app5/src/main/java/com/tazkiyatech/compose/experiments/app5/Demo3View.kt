@@ -21,8 +21,10 @@ import androidx.compose.ui.unit.dp
 import com.tazkiyatech.compose.experiments.app5.theme.AppTheme
 
 @Composable
-fun Demo2View(modifier: Modifier = Modifier) {
+fun Demo3View(modifier: Modifier = Modifier) {
+    val labelText = "Date completed"
     val buttonText = "November 2024"
+    val rowContentDescription = "$labelText $buttonText. Double-tap to expand the date picker."
 
     Column(
         modifier = modifier,
@@ -35,21 +37,18 @@ fun Demo2View(modifier: Modifier = Modifier) {
             style = MaterialTheme.typography.titleLarge,
         )
         Text(
-            text = "We're giving the Row below a \"mergeDescendants\" value of \"true\" and we're clearing the Button's semantics and then giving it a \"contentDescription\" value \"November 2024\". TalkBack will read \"Date completed November 2024\" when you focus on the Row and it won't offer the Button as a focusable item."
+            text = "We're calling \"clearAndSetSemantics\" on the Row below and giving it a \"contentDescription\" value of \"Date completed November 2024. Double-tap to expand the date picker.\". TalkBack will read the \"contentDescription\" value exactly when you focus on the Row and it won't offer the Button as a focusable item."
         )
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .semantics(mergeDescendants = true) {},
+                .clearAndSetSemantics { contentDescription = rowContentDescription },
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text("Date completed")
+            Text(labelText)
             Spacer(modifier = Modifier.width(4.dp))
-            Button(
-                onClick = { },
-                modifier = Modifier.clearAndSetSemantics { contentDescription = buttonText }
-            ) {
+            Button(onClick = { }) {
                 Text(buttonText)
             }
         }
@@ -58,8 +57,8 @@ fun Demo2View(modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun Demo2ViewPreview() {
+fun Demo3ViewPreview() {
     AppTheme {
-        Demo2View()
+        Demo3View()
     }
 }
