@@ -32,7 +32,7 @@ fun Demo3View(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
         Text(
-            text = "Demo 2",
+            text = "Demo 3",
             modifier = Modifier.semantics { heading() },
             style = MaterialTheme.typography.titleLarge,
         )

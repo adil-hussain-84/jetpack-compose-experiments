@@ -35,7 +35,7 @@ fun Demo2View(modifier: Modifier = Modifier) {
             style = MaterialTheme.typography.titleLarge,
         )
         Text(
-            text = "We're giving the Row below a \"mergeDescendants\" value of \"true\" and we're clearing the Button's semantics and then giving it a \"contentDescription\" value \"November 2024\". TalkBack will read \"Date completed November 2024\" when you focus on the Row and it won't offer the Button as a focusable item."
+            text = "We're giving the Row below a \"mergeDescendants\" value of \"true\" and we're clearing the Button's semantics and then giving it a \"contentDescription\" value of \"November 2024\". TalkBack will read \"Date completed November 2024\" when you focus on the Row and it won't offer the Button as a focusable item."
         )
         Row(
             modifier = Modifier
