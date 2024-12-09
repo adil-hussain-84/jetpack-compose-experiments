@@ -9,9 +9,9 @@ You'll find two different solutions in this app, as follows:
 * [ClickableText2][2] – This is the more complicated of the two solutions but it has an advantage: It changes appearance to show which of the clickable parts of the text are pressed down.
 
 Both solutions are built with [Text][3], [AnnotatedString][4], [pointerInput][5] and [detectTapGestures][6].
-The difference between the two  is that
-[ClickableText2][2] provides an `onPress` and `onTap` block into [detectTapGestures][6]
-whilst [ClickableText1][1] provides an `onTap` block only.
+The difference between the two solutions is that
+[ClickableText2][2] provides an `onPress` and `onTap` function into [detectTapGestures][6]
+whilst [ClickableText1][1] provides an `onTap` function only.
 
 When you run the app, you will see a user interface as follows:
 
