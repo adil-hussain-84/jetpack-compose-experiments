@@ -17,11 +17,11 @@ fun MainView(modifier: Modifier = Modifier) {
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Text("Solution 1", style = MaterialTheme.typography.titleLarge)
         ClickableText1()
-        Text("The clickable parts of the text above will not change in appearance whilst they are pressed down.")
+        Text("The clickable parts of the text above do not change in appearance whilst you press down on them.")
         HorizontalDivider(thickness = 1.dp)
         Text("Solution 2", style = MaterialTheme.typography.titleLarge)
         ClickableText2()
-        Text("The clickable parts of the text above will change in appearance whilst they are pressed down.")
+        Text("The clickable parts of the text above change in appearance whilst you press down on them.")
     }
 }
 
