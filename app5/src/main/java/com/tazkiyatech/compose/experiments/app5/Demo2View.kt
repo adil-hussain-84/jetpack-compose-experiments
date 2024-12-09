@@ -1,5 +1,6 @@
 package com.tazkiyatech.compose.experiments.app5
 
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -12,9 +13,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -35,19 +38,19 @@ fun Demo2View(modifier: Modifier = Modifier) {
             style = MaterialTheme.typography.titleLarge,
         )
         Text(
-            text = "We're giving the Row below a \"mergeDescendants\" value of \"true\" and we're clearing the Button's semantics and then giving it a \"contentDescription\" value of \"November 2024\". TalkBack will read \"Date completed November 2024\" when you focus on the Row and it won't offer the Button as a focusable item."
+            text = "We're giving the Row below a \"mergeDescendants\" value of \"true\" and we're clearing the Button's semantics and then giving it a \"contentDescription\" value of \"November 2024\". TalkBack will read \"Date completed November 2024\" when you focus on the Row and it won't find the Button as an individually focusable item."
         )
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .semantics(mergeDescendants = true) {},
+                .semantics(mergeDescendants = true) { role = Role.Button },
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text("Date completed")
             Spacer(modifier = Modifier.width(4.dp))
             Button(
-                onClick = { },
+                onClick = { Log.d("App5", "Date completed button clicked.") },
                 modifier = Modifier.clearAndSetSemantics { contentDescription = buttonText }
             ) {
                 Text(buttonText)

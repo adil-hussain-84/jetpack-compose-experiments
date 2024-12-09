@@ -1,5 +1,6 @@
 package com.tazkiyatech.compose.experiments.app5
 
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -12,9 +13,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -24,7 +27,6 @@ import com.tazkiyatech.compose.experiments.app5.theme.AppTheme
 fun Demo3View(modifier: Modifier = Modifier) {
     val labelText = "Date completed"
     val buttonText = "November 2024"
-    val rowContentDescription = "$labelText $buttonText. Double-tap to expand the date picker."
 
     Column(
         modifier = modifier,
@@ -37,18 +39,21 @@ fun Demo3View(modifier: Modifier = Modifier) {
             style = MaterialTheme.typography.titleLarge,
         )
         Text(
-            text = "We're calling \"clearAndSetSemantics\" on the Row below and giving it a \"contentDescription\" value of \"Date completed November 2024. Double-tap to expand the date picker.\". TalkBack will read the \"contentDescription\" value exactly when you focus on the Row and it won't offer the Button as a focusable item."
+            text = "We're calling \"clearAndSetSemantics\" on the Row below and giving it a \"contentDescription\" value of \"Date completed November 2024\". TalkBack will read \"Date completed November 2024\" when you focus on the Row and it won't find the Button as an individually focusable item."
         )
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .clearAndSetSemantics { contentDescription = rowContentDescription },
+                .clearAndSetSemantics {
+                    contentDescription = "$labelText $buttonText"
+                    role = Role.Button
+                },
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(labelText)
             Spacer(modifier = Modifier.width(4.dp))
-            Button(onClick = { }) {
+            Button(onClick = { Log.d("App5", "Date completed button clicked.") }) {
                 Text(buttonText)
             }
         }

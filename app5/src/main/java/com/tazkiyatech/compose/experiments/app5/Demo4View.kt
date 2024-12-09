@@ -14,38 +14,49 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.tazkiyatech.compose.experiments.app5.theme.AppTheme
 
 @Composable
-fun Demo1View(modifier: Modifier = Modifier) {
+fun Demo4View(modifier: Modifier = Modifier) {
+    val labelText = "Date completed"
+    val buttonText = "November 2024"
+
     Column(
         modifier = modifier,
         horizontalAlignment = Alignment.Start,
         verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
         Text(
-            text = "Demo 1",
+            text = "Demo 4",
             modifier = Modifier.semantics { heading() },
             style = MaterialTheme.typography.titleLarge,
         )
         Text(
-            text = "We're giving the Row below a \"mergeDescendants\" value of \"true\" and we're not clearing or setting additional semantics on the Text or Button. TalkBack will read \"Date completed\" and not \"Date completed November 2024\" when you focus on the Row and it still finds the Button as an individually focusable item."
+            text = "We're calling \"clearAndSetSemantics\" on the Row below and giving it a \"contentDescription\" value of \"Date completed\" and a \"stateDescription\" value of \"November 2024\". TalkBack will read \"November 2024, Date completed, Button\" when you focus on the Row and it won't find the Button as an individually focusable item."
         )
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .semantics(mergeDescendants = true) { Role.Button },
+                .clearAndSetSemantics {
+                    stateDescription = buttonText
+                    contentDescription = labelText
+                    role = Role.Button
+                },
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text("Date completed")
+            Text(labelText)
             Spacer(modifier = Modifier.width(4.dp))
             Button(onClick = { Log.d("App5", "Date completed button clicked.") }) {
-                Text("November 2024")
+                Text(buttonText)
             }
         }
     }
@@ -53,8 +64,8 @@ fun Demo1View(modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun Demo1ViewPreview() {
+fun Demo4ViewPreview() {
     AppTheme {
-        Demo1View()
+        Demo4View()
     }
 }
