@@ -3,8 +3,8 @@
 This Jetpack Compose Android application demonstrates
 two different ways of setting a [Button][1]'s ripple colour.
 One approach is to use [RippleConfiguration][3].
-The other is to specify the colour of the content in the [Button][1]
-by means of the [Button][1]'s `colors` parameter.
+The other approach is to specify the [Button][1]'s content colour
+by means of its `colors` parameter.
 
 When you run the app, you will see a user interface as follows:
 
