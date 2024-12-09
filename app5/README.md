@@ -1,7 +1,7 @@
-# Demo: Three different ways of merging a Row's Text and Button values for TalkBack
+# Demo: Three different ways of merging a Row's descendant Text and Button for TalkBack
 
 This Jetpack Compose Android application demonstrates three different ways
-of merging a [Row][1]'s descendant [Text][2] and [Button][3] values for TalkBack.
+of merging a [Row][1]'s descendant [Text][2] and [Button][3] for TalkBack.
 This is important because, by default,
 TalkBack does not merge the contents of a [Row][1] which contains a [Text][2] and [Button][3]
 when you specify `mergeDescendants = true` on the [Row][1]:
