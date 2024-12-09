@@ -1,4 +1,4 @@
-# State demonstration
+# Demo: Six different ways of remembering state for a Composable
 
 This Android application demonstrates different ways of remembering state in [Jetpack Compose][7] views.
 

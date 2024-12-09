@@ -1,4 +1,4 @@
-# Buttons' demonstration
+# Demo: Two different ways of setting a Button's ripple colour
 
 This Jetpack Compose Android application demonstrates different ways of changing
 the container colour, content colour and ripple effect of buttons.

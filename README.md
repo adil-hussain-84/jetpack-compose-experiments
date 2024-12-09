@@ -1,15 +1,16 @@
 # Experiments with Android's Jetpack Compose UI toolkit
 
-This project houses a number of Android applications which each demonstrate a particular aspect of the [Jetpack Compose][1] UI toolkit.
+This project houses a number of Android applications which each demonstrate a particular aspect of
+the [Jetpack Compose][1] UI toolkit.
 
 The applications in this project are as follows:
 
-|              |                              |
-|--------------|------------------------------|
-| [app1](app1) | Tappable text demonstration. |
-| [app2](app2) | Bulleted text demonstration. |
-| [app3](app3) | State demonstration.         |
-| [app4](app4) | Buttons' demonstration.      |
-| [app5](app5) | Accessibility demonstration. |
+|              |                                                                                   |
+|--------------|-----------------------------------------------------------------------------------|
+| [app1](app1) | Demo: Two different ways of detecting which word in a text is tapped              |
+| [app2](app2) | Demo: Two different ways of creating a bulleted list                              |
+| [app3](app3) | Demo: Six different ways of remembering state for a Composable                    |
+| [app4](app4) | Demo: Two different ways of setting a Button's ripple colour                      |
+| [app5](app5) | Demo: Three different ways of merging a Row's Text and Button values for TalkBack |
 
 [1]: https://developer.android.com/compose

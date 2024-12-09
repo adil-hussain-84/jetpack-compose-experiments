@@ -1,4 +1,4 @@
-# Bulleted text demonstration
+# Demo: Two different ways of creating a bulleted list
 
 This Android application demonstrates how to create a bulleted list with [Jetpack Compose][7].
 
