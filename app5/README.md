@@ -4,9 +4,9 @@ This Jetpack Compose Android application demonstrates three different ways
 of merging a [Row][1]'s descendant [Text][2] and [Button][3] for TalkBack.
 This is important because, by default,
 TalkBack does not merge the contents of a [Row][1] which contains a [Text][2] and [Button][3]
-when you specify `mergeDescendants = true` on the [Row][1]:
-TalkBack reads the contents of the [Text][2] only when the [Row][1] is focused
-and still finds the [Button][3] as an individually focusable item.
+when you specify `mergeDescendants = true` on the [Row][1].
+What it does is read the contents of the [Text][2] only when the [Row][1] is focused
+and it still finds the [Button][3] as an individually focusable item.
 See [this Stack Overflow question][4] for a more detailed explanation of the problem.
 
 When you run the app, you will see a user interface as follows:
