@@ -1,10 +1,10 @@
 [versions]
-kotlin = "2.1.21"
+kotlin = "2.2.0"
 lifecycle = "2.9.1"
 
 [libraries]
 activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.10.1" }
-compose-bom = { group = "androidx.compose", name = "compose-bom", version = "2025.06.00" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version = "2025.06.01" }
 compose-material3 = { module = "androidx.compose.material3:material3" } # gets the version from the Compose BoM
 compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata" }
 compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" } # gets the version from the Compose BoM
@@ -18,7 +18,7 @@ lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtim
 lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 
 [plugins]
-android-application = { id = "com.android.application", version = "8.10.1" }
+android-application = { id = "com.android.application", version = "8.11.0" }
 benmanes-versions = { id = "com.github.ben-manes.versions", version = "0.52.0" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
