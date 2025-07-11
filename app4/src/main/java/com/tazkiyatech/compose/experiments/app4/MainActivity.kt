@@ -4,53 +4,57 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.calculateEndPadding
-import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.runtime.Composable
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.max
 import com.tazkiyatech.compose.experiments.app4.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
 
+    @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             AppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MainView(
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    topBar = {
+                        TopAppBar(
+                            title = {
+                                Text(
+                                    text = "Buttons' experiment",
+                                    modifier = Modifier.semantics { heading() }
+                                )
+                            },
+                            colors = topAppBarColors(
+                                containerColor = MaterialTheme.colorScheme.primaryContainer,
+                                titleContentColor = MaterialTheme.colorScheme.primary,
+                            ),
+                        )
+                    }
+                ) { innerPadding ->
+                    Surface(
                         modifier = Modifier
-                            .padding(calculatePadding(innerPadding))
                             .fillMaxSize()
-                    )
+                            .padding(innerPadding),
+                        color = Color.Transparent,
+                    ) {
+                        MainView(modifier = Modifier.padding(16.dp))
+                    }
                 }
             }
         }
     }
-}
-
-@Composable
-private fun calculatePadding(innerPadding: PaddingValues): PaddingValues {
-    val layoutDirection = LocalLayoutDirection.current
-
-    val innerStartPadding = innerPadding.calculateStartPadding(layoutDirection)
-    val innerEndPadding = innerPadding.calculateEndPadding(layoutDirection)
-    val innerTopPadding = innerPadding.calculateTopPadding()
-    val innerBottomPadding = innerPadding.calculateBottomPadding()
-
-    val minimumPadding = 16.dp
-
-    return PaddingValues(
-        start = max(innerStartPadding, minimumPadding),
-        top = max(innerTopPadding, minimumPadding),
-        end = max(innerEndPadding, minimumPadding),
-        bottom = max(innerBottomPadding, minimumPadding)
-    )
 }

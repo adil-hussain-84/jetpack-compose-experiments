@@ -29,10 +29,6 @@ fun MainView(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.spacedBy(8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text(
-            text = "Jetpack Compose Buttons' Experiment",
-            style = MaterialTheme.typography.titleMedium,
-        )
         Button(
             onClick = {},
             modifier = Modifier.fillMaxWidth(),
