@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
                         TopAppBar(
                             title = {
                                 Text(
-                                    text = "Mixed language TalkBack behaviour",
+                                    text = "TalkBack Arabic text experiments",
                                     modifier = Modifier.semantics { heading() }
                                 )
                             },

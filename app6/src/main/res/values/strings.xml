@@ -6,6 +6,6 @@
         you will notice that TalkBack does not read out the Arabic text.
         On the other hand,
         if your device has its primary language set to a language that has an Arabic script (e.g. Arabic or Urdu),
-        you will notice that TalkBack reads out both the Arabic and the English text.
+        you will notice that TalkBack reads out both the Arabic and English text perfectly fine.
     </string>
 </resources>
