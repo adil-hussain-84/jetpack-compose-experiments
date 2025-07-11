@@ -18,7 +18,7 @@ lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtim
 lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 
 [plugins]
-android-application = { id = "com.android.application", version = "8.11.0" }
+android-application = { id = "com.android.application", version = "8.11.1" }
 benmanes-versions = { id = "com.github.ben-manes.versions", version = "0.52.0" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
