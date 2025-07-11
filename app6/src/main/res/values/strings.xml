@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Compose Experiment App6</string>
+    <string name="introductory_text">
+        Run this app with TalkBack enabled on your device.
+        If your device has its primary language set to a language that has a Latin script (e.g. English or French),
+        you will notice that TalkBack does not read out the Arabic text.
+        On the other hand,
+        if your device has its primary language set to a language that has an Arabic script (e.g. Arabic or Urdu),
+        you will notice that TalkBack reads out both the Arabic and the English text.
+    </string>
 </resources>
