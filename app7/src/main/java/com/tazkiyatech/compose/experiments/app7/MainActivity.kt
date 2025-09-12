@@ -106,7 +106,7 @@ fun MainScreen() {
             }
         ) { innerPadding ->
             Greeting(
-                name = "Content for $selectedItemTitle",
+                name = selectedItemTitle,
                 modifier = Modifier.padding(innerPadding)
             )
         }
@@ -156,7 +156,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         .calculateEndPadding(LocalLayoutDirection.current)
 
     Text(
-        text = "Hello $name!",
+        text = "Hello from the $name screen! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         modifier = modifier
             .padding(16.dp)
             .padding(
