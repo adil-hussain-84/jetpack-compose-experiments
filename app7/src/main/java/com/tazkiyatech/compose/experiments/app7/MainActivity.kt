@@ -129,7 +129,6 @@ fun DrawerContent(currentItemTitle: String, onItemClick: (String) -> Unit) {
 
     Column(
         modifier = Modifier
-            .padding(NavigationDrawerItemDefaults.ItemPadding)
             .padding(start = displayCutoutStartPaddingDp)
             .verticalScroll(scrollState)
     ) {
@@ -140,6 +139,7 @@ fun DrawerContent(currentItemTitle: String, onItemClick: (String) -> Unit) {
                 label = { Text(title) },
                 selected = title == currentItemTitle,
                 onClick = { onItemClick(title) },
+                modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding),
             )
         }
     }
