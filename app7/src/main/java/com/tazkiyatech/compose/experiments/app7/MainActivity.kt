@@ -114,10 +114,16 @@ fun DrawerContent(currentItemTitle: String, onItemClick: (String) -> Unit) {
         "Info" to Icons.Filled.Info,
     )
     val scrollState = rememberScrollState()
+    val layoutDirection = LocalLayoutDirection.current
+
+    val displayCutoutStartPaddingDp = WindowInsets.displayCutout
+        .asPaddingValues()
+        .calculateStartPadding(layoutDirection)
 
     Column(
         modifier = Modifier
             .padding(NavigationDrawerItemDefaults.ItemPadding)
+            .padding(start = displayCutoutStartPaddingDp)
             .verticalScroll(scrollState)
     ) {
         Spacer(Modifier.height(12.dp))
@@ -127,7 +133,6 @@ fun DrawerContent(currentItemTitle: String, onItemClick: (String) -> Unit) {
                 label = { Text(title) },
                 selected = title == currentItemTitle,
                 onClick = { onItemClick(title) },
-                modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding)
             )
         }
     }
