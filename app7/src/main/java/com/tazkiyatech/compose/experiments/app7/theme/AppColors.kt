@@ -1,4 +1,4 @@
-package com.tazkiyatech.compose.experiments.app6.theme
+package com.tazkiyatech.compose.experiments.app7.theme
 
 import androidx.compose.ui.graphics.Color
 

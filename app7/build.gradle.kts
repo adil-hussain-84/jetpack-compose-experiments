@@ -2,16 +2,16 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
-    namespace = "com.tazkiyatech.compose.experiments.app6"
+    namespace = "com.tazkiyatech.compose.experiments.app7"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.tazkiyatech.compose.experiments.app6"
+        applicationId = "com.tazkiyatech.compose.experiments.app7"
         minSdk = 24
         targetSdk = 36
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
