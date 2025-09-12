@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState // Added import
+import androidx.compose.foundation.verticalScroll // Added import
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
@@ -103,10 +105,15 @@ fun DrawerContent(currentItemTitle: String, onItemClick: (String) -> Unit) {
     val drawerItems = listOf(
         "Home" to Icons.Filled.Home,
         "Settings" to Icons.Filled.Settings,
-        "Info" to Icons.Filled.Info
+        "Info" to Icons.Filled.Info,
     )
+    val scrollState = rememberScrollState()
 
-    Column(modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding)) {
+    Column(
+        modifier = Modifier
+            .padding(NavigationDrawerItemDefaults.ItemPadding)
+            .verticalScroll(scrollState)
+    ) {
         Spacer(Modifier.height(12.dp))
         drawerItems.forEach { (title, icon) ->
             NavigationDrawerItem(
