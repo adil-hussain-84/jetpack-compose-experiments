@@ -6,11 +6,16 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.calculateEndPadding
+import androidx.compose.foundation.layout.calculateStartPadding
+import androidx.compose.foundation.layout.displayCutout
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState // Added import
-import androidx.compose.foundation.verticalScroll // Added import
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
@@ -35,6 +40,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.tazkiyatech.compose.experiments.app7.theme.AppTheme
@@ -129,9 +135,22 @@ fun DrawerContent(currentItemTitle: String, onItemClick: (String) -> Unit) {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
+    val displayCutoutPaddingValues = WindowInsets.displayCutout.asPaddingValues()
+
+    val displayCutoutStartPaddingDp = displayCutoutPaddingValues
+        .calculateStartPadding(LocalLayoutDirection.current)
+
+    val displayCutoutEndPaddingDp = displayCutoutPaddingValues
+        .calculateEndPadding(LocalLayoutDirection.current)
+
     Text(
         text = "Hello $name!",
-        modifier = modifier.padding(16.dp)
+        modifier = modifier
+            .padding(16.dp)
+            .padding(
+                start = displayCutoutStartPaddingDp,
+                end = displayCutoutEndPaddingDp,
+            )
     )
 }
 
@@ -140,13 +159,5 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 fun MainScreenPreview() {
     AppTheme {
         MainScreen()
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AppTheme {
-        Greeting("Android")
     }
 }
