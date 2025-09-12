@@ -1,10 +1,10 @@
 [versions]
-kotlin = "2.2.0"
-lifecycle = "2.9.1"
+kotlin = "2.2.20"
+lifecycle = "2.9.3"
 
 [libraries]
-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.10.1" }
-compose-bom = { group = "androidx.compose", name = "compose-bom", version = "2025.06.01" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.11.0" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version = "2025.09.00" }
 compose-material3 = { module = "androidx.compose.material3:material3" } # gets the version from the Compose BoM
 compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata" }
 compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" } # gets the version from the Compose BoM
@@ -12,13 +12,13 @@ compose-ui-ui = { module = "androidx.compose.ui:ui" } # gets the version from th
 compose-ui-testmanifest = { module = "androidx.compose.ui:ui-test-manifest" } # gets the version from the Compose BoM
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" } # gets the version from the Compose BoM
 compose-ui-toolingpreview = { module = "androidx.compose.ui:ui-tooling-preview" } # gets the version from the Compose BoM
-core-ktx = { group = "androidx.core", name = "core-ktx", version = "1.16.0" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version = "1.17.0" }
 lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle" }
 lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
 lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 
 [plugins]
-android-application = { id = "com.android.application", version = "8.11.1" }
+android-application = { id = "com.android.application", version = "8.13.0" }
 benmanes-versions = { id = "com.github.ben-manes.versions", version = "0.52.0" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
