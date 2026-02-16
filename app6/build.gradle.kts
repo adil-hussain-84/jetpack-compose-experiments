@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.tazkiyatech.compose.experiments.app6"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 36
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         versionCode = 1
