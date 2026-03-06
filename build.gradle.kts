@@ -4,11 +4,10 @@ plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.benmanes.versions)
     alias(libs.plugins.compose.compiler) apply false
-    alias(libs.plugins.kotlin.android) apply false
 }
 
 tasks.wrapper {
-    gradleVersion = "8.14.2"
+    gradleVersion = "9.4.0"
 }
 
 // Alter the default behaviour of the "com.github.ben-manes.versions" plugin
