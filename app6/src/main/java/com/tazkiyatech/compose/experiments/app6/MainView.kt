@@ -17,7 +17,7 @@ import com.tazkiyatech.compose.experiments.app6.theme.AppTheme
 fun MainView(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(16.dp),
+        verticalArrangement = Arrangement.spacedBy(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(
@@ -27,6 +27,7 @@ fun MainView(modifier: Modifier = Modifier) {
         )
         Demo1View()
         Demo2View()
+        Demo3View()
     }
 }
 
